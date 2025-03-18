@@ -51,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, NotificationActivity.class);
             startActivity(intent);
         });
+        Button btnView = findViewById(R.id.btn_view);
+        btnView.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, NotificationViewActivity.class);
+            startActivity(intent);
+        });
+
     }
 
     /**

@@ -8,5 +8,5 @@ import retrofit2.http.POST;
 
 public interface NotificationApi {
     @POST("/v1/generate")
-    Call<Void> sendNotifications(@Body List<NotificationEntity> notifications);
+    Call<ApiResponse> sendNotifications(@Body List<NotificationEntity> notifications);
 }
