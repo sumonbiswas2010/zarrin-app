@@ -24,7 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NotificationViewActivity"></activity>
+        <activity android:name=".ApiResponseViewActivity"></activity>
         <!-- NotificationActivity Declaration -->
         <activity android:name=".NotificationActivity"
             android:label="@string/activity_notification"

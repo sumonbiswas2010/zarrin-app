@@ -29,7 +29,7 @@ public class MyNotificationListenerService extends NotificationListenerService {
         saveNotification(getApplicationContext(), packageName, title != null ? title.toString() : "", text != null ? text.toString() : "", timestamp);
 
         // Dismiss the notification
-        cancelNotification(sbn.getKey());
+//        cancelNotification(sbn.getKey());
     }
 
     private void saveNotification(Context context, String packageName, String title, String text, long timestamp) {

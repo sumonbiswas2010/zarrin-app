@@ -52,32 +52,11 @@ public class NotificationActivity extends AppCompatActivity {
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... voids) {
-                NotificationDatabase db = NotificationDatabase.getInstance(getApplicationContext());
+//                NotificationDatabase db = NotificationDatabase.getInstance(getApplicationContext());
                 ApiResponseDatabase apiResponseDatabase = ApiResponseDatabase.getInstance(getApplicationContext());
                 long timestamp = System.currentTimeMillis();
 
                 // Save notification data
-                if (apiResponse.data != null) {
-                    db.notificationDao().insertNotification(new NotificationEntity(apiResponse.data.summary, "summary", apiResponse.data.summary, timestamp));
-
-                    if (apiResponse.data.alerts != null) {
-                        for (String alert : apiResponse.data.alerts) {
-                            db.notificationDao().insertNotification(new NotificationEntity(alert, "alert", alert, timestamp));
-                        }
-                    }
-
-                    if (apiResponse.data.tasks != null) {
-                        for (String task : apiResponse.data.tasks) {
-                            db.notificationDao().insertNotification(new NotificationEntity(task, "task", task, timestamp));
-                        }
-                    }
-
-                    if (apiResponse.data.calender_events != null) {
-                        for (String event : apiResponse.data.calender_events) {
-                            db.notificationDao().insertNotification(new NotificationEntity(event, "calendar", event, timestamp));
-                        }
-                    }
-                }
 
                 // Save API response summary into ApiResponseDatabase
                 if (apiResponse.data != null) {
